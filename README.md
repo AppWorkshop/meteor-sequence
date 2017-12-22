@@ -110,25 +110,27 @@ sequence.newSequence(
   {
     numsys: "0123456789ABCDEF", // the 'digits' to be used in the sequence
     padChar: "0", // the character to left-pad with if the value is not long enough. 
-    length: 2 // the number of characters in the sequence; the sequence will 'wrap around' if it runs out of values.
+    length: 2, // the number of characters in the sequence; the sequence will 'wrap around' if it runs out of values.
+    prefix: "PRE-",
+    suffix: "-SUFF"
   },
   "EF" // the initial value of the sequence
 ).then(function (id) {
   console.log(`created a new sequence with id ${id}`);
 });
 
-const numValues = sequence.calculateNumberOfPossibleValues("hex"); // 256 possible values, since we have 2 digits.
+const numValues = sequence.calculateNumberOfPossibleValues("hexWithPrefixSuffix"); // 256 possible values, since we have 2 digits.
 
 // get the next value in the sequence
-sequence.getAndUpdateNextNumberInSequence("hex")
+sequence.getAndUpdateNextNumberInSequence("hexWithPrefixSuffix")
 .then(function (nextInSequence) {
-  console.log(nextInSequence); // F0
+  console.log(nextInSequence); // PRE-F0-SUFF
 });
 
 // get the next value in the sequence
-sequence.getAndUpdateNextNumberInSequence("hex")
+sequence.getAndUpdateNextNumberInSequence("hexWithPrefixSuffix")
 .then(function (nextInSequence) {
-  console.log(nextInSequence); // F1
+  console.log(nextInSequence); // PRE-F1-SUFF
 });
 ```
 
