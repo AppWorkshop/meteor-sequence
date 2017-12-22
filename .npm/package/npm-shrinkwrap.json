@@ -1,0 +1,10 @@
+{
+  "lockfileVersion": 1,
+  "dependencies": {
+    "number-sequence": {
+      "version": "1.0.0",
+      "resolved": "https://registry.npmjs.org/number-sequence/-/number-sequence-1.0.0.tgz",
+      "integrity": "sha512-k136l5Nb0ocRnY3O3PnZu6xf/Djkzl9FhgXmDOP7UHH5EJ/6zR2JPJUj2r6HAnvHyk/5vHhLXcI3imyL++gwkw=="
+    }
+  }
+}
