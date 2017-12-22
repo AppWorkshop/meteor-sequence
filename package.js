@@ -1,6 +1,6 @@
 Package.describe({
   name: 'juto:sequence',
-  version: '0.0.1',
+  version: '1.0.0',
   // Brief, one-line summary of the package.
   summary: 'Manages aribtrary sequences in a Sequences collection',
   // URL to the Git repository containing the source code for this package.
